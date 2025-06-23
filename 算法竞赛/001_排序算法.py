@@ -1,3 +1,6 @@
+# 将读入的 N 个数从小到大排序后输出。
+# https://www.luogu.com.cn/problem/P1177
+
 def Selection_Sort(a):
 
     for i in range(len(a)):
@@ -8,7 +11,7 @@ def Selection_Sort(a):
                 min = a[j]
                 min_index = j
         a[i],a[min_index] = a[min_index],a[i]
-        print(a)
+        # print(a)
     return a
 def Bubble_Sort(a):
     for i in range(len(a)):
@@ -23,10 +26,16 @@ def Insertion_Sort(a):
         while j > 0 and a[j] < a[j-1]:
             a[j],a[j-1] = a[j-1],a[j]
             j -= 1
-        print(a)
+        # print(a)
     return a
-a = [5,2,8,1,9]
-# a = Selection_Sort(a)
+def list_out(a):
+    for i in a:
+        print(i,end = ' ')
+
+n = int(input())
+a = list(map(int, input().split()))
+a = Selection_Sort(a)
 # a = Bubble_Sort(a)
-a = Insertion_Sort(a)
-print(a)
+# a = Insertion_Sort(a)
+# print(a)
+list_out(a)
