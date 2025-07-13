@@ -1,4 +1,3 @@
-
 def print_bin(n):
     bits = ""
     while n > 0:
@@ -17,7 +16,12 @@ def print_bin(n):
     while len(bits) < 4:
         bits = "0" + bits
     return "0b" + bits
-# a = 0b1010
-a = 1
-print(print_bin(a))
-print(bin(a))
+
+m = 0b1101
+# 降序遍历 m 的非空子集
+s = m
+print(print_bin(s))
+while s > 0:
+  # s 是 m 的一个非空子集
+  s = (s - 1) & m
+  print(print_bin(s))
