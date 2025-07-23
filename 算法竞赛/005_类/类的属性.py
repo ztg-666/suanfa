@@ -1,12 +1,12 @@
 class Dog:
     # 这是初始化方法
-    def __init__(self, name, age):
+    def __init__(self, Name, Age):
         # self 代表正在被创建的那个对象
-        print(f"一只叫做 {name} 的小狗被创建了！")
+        print(f"一只叫做 {Name} 的小狗被创建了！")
 
         # 将传入的参数值，绑定到对象自身的属性上
-        self.name = name
-        self.age = age
+        self.name = Name
+        self.age = Age
 
 
 # 实例化时，在类名后面的括号里传入 __init__ 方法需要的参数 (self 除外)

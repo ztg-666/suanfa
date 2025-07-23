@@ -30,11 +30,15 @@ class Car:
             self.speed -= value
         else:
             self.speed = 0
+            self.is_running = False
         print(f"减速 {value} km/h, 当前速度: {self.speed} km/h")
 
     # 显示汽车信息的方法
     def get_info(self):
-        status = "运行中" if self.is_running else "已熄火"
+        if self.is_running:
+            status = "运行中"
+        else:
+            status = "已熄火"
         return f"品牌: {self.brand}, 型号: {self.model}, 颜色: {self.color}, 状态: {status}"
 
 
